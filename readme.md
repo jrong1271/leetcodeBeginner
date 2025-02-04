@@ -4,7 +4,7 @@
 - [x] use this repository to monitor progress as I go through each challenge
 - [x] setup a typescript project and use vitest to test
   * run ```npm run test:coverage```
-  ![](coverage.png)
+  ![](src/tests/coverage.png)
 - [x] configure vs code debugger so I can inspect the state of running application   
   * configure file at *.vscode/launch.json*
 - [x] run and commit resolutions to all challenges in the beginner section;  this practice require familiarity with the following:
