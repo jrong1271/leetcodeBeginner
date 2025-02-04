@@ -1,15 +1,14 @@
 import { describe, it, expect } from "vitest";
 
-import { twoSum } from "../utils/1.twoSum";
-import { reverse } from "../utils/2.reverse";
+import { twoSum } from "../utils/0001.twoSum";
+import { reverse } from "../utils/0002.reverse";
+import { canConstruct } from "../utils/0283.canConstruct";
+import { fizzBuzz } from "../utils/0412.fizzBuzz";
+import { middleNode, createLinkedList } from "../utils/0876.middleNode";
 import { numberOfSteps } from "../utils/1342.numberOfSteps";
-import { maximumWealth } from "../utils/1672.maximumWealth";
-import { middleNode, createLinkedList } from "../utils/876.middleNode";
-import { fizzBuzz } from "../utils/412.fizzBuzz";
-import { canConstruct } from "../utils/283.canConstruct";
-import { mergeAlternately } from "../utils/1768.mergeAlternately";
-
 import { runningSum } from "../utils/1480.runningSum";
+import { maximumWealth } from "../utils/1672.maximumWealth";
+import { mergeAlternately } from "../utils/1768.mergeAlternately";
 
 describe("runningSum", () => {
   it("Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]). Return the running sum of nums.", () => {
@@ -58,22 +57,22 @@ describe("maximumWealth", () => {
 });
 
 describe("fizzBuzz", () => {
-  it("Given an integer n, return a string array.", () => {
-    const n = 15;
-    const output = ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"];
-    expect(fizzBuzz(n)).toEqual(output);
+  it("Given an integer n, return a string array answer (1-indexed) where: answer[i] == 'FizzBuzz' if i is divisible by 3 and 5.", () => {
+    expect(fizzBuzz(3)).toEqual(["1","2","Fizz"]);
+    expect(fizzBuzz(5)).toEqual(["1","2","Fizz","4","Buzz"]);
+    expect(fizzBuzz(15)).toEqual(["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]);
   });
 });
 
 describe("middleNode", () => {
-  it("should return the middle node", () => {
+  it("Given the head of a singly linked list, return the middle node of the linked list. If there are two middle nodes, return the second middle node.", () => {
     expect(middleNode(createLinkedList([1,2,3,4,5,6]))).toStrictEqual(createLinkedList([4,5,6]));
     expect(middleNode(createLinkedList([1,2,3,4,5]))).toStrictEqual(createLinkedList([3,4,5]));
   });
 });
 
 describe("reverse", () => {
-  it("should return the input integer in reversed order", () => {
+  it("Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.", () => {
     expect(reverse(123)).toStrictEqual(321);
     expect(reverse(2147483648)).toStrictEqual(0);
     expect(reverse(-2147483648)).toStrictEqual(0);
