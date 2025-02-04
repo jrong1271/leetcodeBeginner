@@ -1,0 +1,32 @@
+{
+  "name": "leetcodebeginner",
+  "version": "1.0.0",
+  "description": "use vitest to test and debug leetcode challeneges",
+  "scripts": {
+    "test": "vitest",
+    "test:coverage": "vitest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrong1271/leetcodeBeginner"
+  },
+  "keywords": [
+    "leetcode",
+    "typescript",
+    "javascript",
+    "vitest"
+  ],
+  "author": "Joe Rong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrong1271/leetcodeBeginner/issues"
+  },
+  "homepage": "https://github.com/jrong1271/leetcodeBeginner#readme",
+  "devDependencies": {
+    "@vitest/coverage-istanbul": "^3.0.5",
+    "@vitest/coverage-v8": "^3.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}
