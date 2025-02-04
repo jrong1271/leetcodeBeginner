@@ -19,18 +19,16 @@ describe("mergeAlternately", () => {
 
 describe("canConstruct", () => {
   it("Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise", () => {
-    const ransomNote = "aa";
-    const magazine = "ab";
-    expect(canConstruct(ransomNote, magazine)).toEqual(false);
+    expect(canConstruct("a", "b")).toEqual(false);
+    expect(canConstruct("aa", "ab")).toEqual(false);
+    expect(canConstruct("aa", "aab")).toEqual(true);
   });
 });
 
 describe("twoSum", () => {
   it("should find the indexes of the integers that add up to the target value", () => {
-    const input = [1, 2, 3];
-    const target = 5;
-    const equalTo = [1, 2];
-    expect(twoSum(input, target)).toEqual(expect.arrayContaining(equalTo));
+    expect(twoSum([1, 2, 3], 5)).toEqual(expect.arrayContaining([1, 2]));
+    expect(twoSum([1, 2, 3], 11)).toEqual([]);
   });
 });
 describe("numberOfSteps", () => {
@@ -56,17 +54,16 @@ describe("fizzBuzz", () => {
 
 describe("middleNode", () => {
   it("should return the middle node", () => {
-    const input = createLinkedList([1,2,3,4,5,6]);
-    const equalTo = createLinkedList([4,5,6]);
-    expect(middleNode(input)).toStrictEqual(equalTo);
+    expect(middleNode(createLinkedList([1,2,3,4,5,6]))).toStrictEqual(createLinkedList([4,5,6]));
+    expect(middleNode(createLinkedList([1,2,3,4,5]))).toStrictEqual(createLinkedList([3,4,5]));
   });
 });
 
 describe("reverse", () => {
   it("should return the input integer in reversed order", () => {
-    const input = 123;
-    const equalTo = 321;
-    expect(reverse(input)).toStrictEqual(equalTo);
+    expect(reverse(123)).toStrictEqual(321);
+    expect(reverse(2147483648)).toStrictEqual(0);
+    expect(reverse(-2147483648)).toStrictEqual(0);
   });
 });
 
