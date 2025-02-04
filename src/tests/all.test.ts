@@ -9,8 +9,18 @@ import { fizzBuzz } from "../utils/412.fizzBuzz";
 import { canConstruct } from "../utils/283.canConstruct";
 import { mergeAlternately } from "../utils/1768.mergeAlternately";
 
+import { runningSum } from "../utils/1480.runningSum";
+
+describe("runningSum", () => {
+  it("Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]). Return the running sum of nums.", () => {
+    expect(runningSum([1,2,3,4])).toEqual([1,3,6,10]);
+    expect(runningSum([1,1,1,1,1])).toEqual([1,2,3,4,5]);
+    expect(runningSum([3,1,2,10,1])).toEqual([3,4,6,16,17]);
+  });
+});
+
 describe("mergeAlternately", () => {
-  it("given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.", () => {
+  it("Given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.", () => {
     expect(mergeAlternately("abc", "pqr")).toEqual("apbqcr");
     expect(mergeAlternately("ab", "pqrs")).toEqual("apbqrs");
     expect(mergeAlternately("abcd", "pq")).toEqual("apbqcd");
@@ -26,21 +36,24 @@ describe("canConstruct", () => {
 });
 
 describe("twoSum", () => {
-  it("should find the indexes of the integers that add up to the target value", () => {
-    expect(twoSum([1, 2, 3], 5)).toEqual(expect.arrayContaining([1, 2]));
-    expect(twoSum([1, 2, 3], 11)).toEqual([]);
+  it("Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.", () => {
+    expect(twoSum([2,7,11,15], 9)).toEqual(expect.arrayContaining([0, 1]));
+    expect(twoSum([3,2,4], 6)).toEqual(expect.arrayContaining([1,2]));
+    expect(twoSum([3,3], 6)).toEqual(expect.arrayContaining([0,1]));
+    expect(twoSum([3,3], 7)).toEqual(expect.arrayContaining([]));
   });
 });
 describe("numberOfSteps", () => {
-  it("Given an integer num, return the number of steps to reduce it to zero.", () => {
-    const num = 14;
-    expect(numberOfSteps(num)).toEqual(6);
+  it("Given the head of a singly linked list, return the middle node of the linked list. If there are two middle nodes, return the second middle node.", () => {
+    expect(numberOfSteps(14)).toEqual(6);
+    expect(numberOfSteps(8)).toEqual(4);
   });
 });
 describe("maximumWealth", () => {
-  it("Given an m x n integer grid accounts, the wealth that the richest customer has.", () => {
-    const num = [[1,2,3],[3,2,1]];
-    expect(maximumWealth(num)).toEqual(6);
+  it("Given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.", () => {
+    expect(maximumWealth([[1,2,3],[3,2,1]])).toEqual(6);
+    expect(maximumWealth([[1,5],[7,3],[3,5]])).toEqual(10);
+    expect(maximumWealth([[2,8,7],[7,1,3],[1,9,5]])).toEqual(17);
   });
 });
 
