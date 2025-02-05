@@ -1,7 +1,7 @@
 export function reverse(x: number): number {
-  let min = Math.pow(-2, 31);
-  let max = Math.pow(2, 31)-1;
-  let sign = Math.sign(x);
+  const min = Math.pow(-2, 31);
+  const max = Math.pow(2, 31)-1;
+  const sign = Math.sign(x);
   x = Math.abs(x);
   let result = 0;
   let remainder;
@@ -9,7 +9,7 @@ export function reverse(x: number): number {
   while (x > 0) {
     remainder = x%10;
     x = (x - remainder)/10;
-    result = result * 10 + remainder
+    result = result * 10 + remainder;
   }
   result *= sign;
 

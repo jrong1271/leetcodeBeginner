@@ -1,12 +1,12 @@
 export function numberOfSteps(num : number) : number {
-    let steps = 0 
+    let steps = 0; 
     while (num > 0) {
         if (num % 2 > 0) {
-            num -= 1
+            num -= 1;
         } else {
-            num /= 2
+            num /= 2;
         }
-        steps++
+        steps++;
     }
     return steps;
 };

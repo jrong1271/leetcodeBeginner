@@ -1,6 +1,6 @@
 export function twoSum(nums: number[], target: number): number[] {
-  let resArr: number[] = [];
-  let map: Map<number, number> = new Map();
+  const resArr: number[] = [];
+  const map: Map<number, number> = new Map();
   let match: number | undefined;
   for (let i = 0; i < nums.length; i++) {
     const current = nums[i];
