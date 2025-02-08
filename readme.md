@@ -1,6 +1,6 @@
 **leetcode beginner challenge** | timeframe: 2-3 days | language: typescript
 
-after completing the novice level for leetcode, I moved on to the next level here
+after completing the beginner level for leetcode problems, I moved on to the next level here
 https://github.com/jrong1271/leetcode75
 
 ***tasks***
