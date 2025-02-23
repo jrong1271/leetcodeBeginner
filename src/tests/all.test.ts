@@ -9,6 +9,14 @@ import { numberOfSteps } from "../utils/1342.numberOfSteps";
 import { runningSum } from "../utils/1480.runningSum";
 import { maximumWealth } from "../utils/1672.maximumWealth";
 import { mergeAlternately } from "../utils/1768.mergeAlternately";
+import { reverseString } from "../utils/test";
+
+describe("reverseString", () => {
+  it("Given a string, return the reverse of the string", () => {
+    expect(reverseString("hello")).toEqual("olleh");
+    expect(reverseString("world")).toEqual("dlrow");
+  });
+});
 
 describe("runningSum", () => {
   it("Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]). Return the running sum of nums.", () => {
@@ -68,6 +76,7 @@ describe("middleNode", () => {
   it("Given the head of a singly linked list, return the middle node of the linked list. If there are two middle nodes, return the second middle node.", () => {
     expect(middleNode(createLinkedList([1,2,3,4,5,6]))).toStrictEqual(createLinkedList([4,5,6]));
     expect(middleNode(createLinkedList([1,2,3,4,5]))).toStrictEqual(createLinkedList([3,4,5]));
+    expect(middleNode(createLinkedList([1,2,3,4,5,6,7,8,9,10]))).toStrictEqual(createLinkedList([6,7,8,9,10]));
   });
 });
 

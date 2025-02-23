@@ -1,3 +1,13 @@
+// Difficulty: Easy
+// Level: 1
+// Problem: Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+// If there are two middle nodes, return the second middle node.
+// Constraints: The number of nodes in the given list will be between 1 and 100.
+//
+// Example 1:
+// Input: [1,2,3,4,5]
+// Output: [3,4,5]
+
 // Definition for singly-linked list node.
 export class ListNode {
     val: number
@@ -25,7 +35,9 @@ export function middleNode(head: ListNode | null): ListNode | null {
   let slow = fast;
   while (fast !== null && fast.next !== null) {
     fast = fast.next.next;
-    slow = slow.next;
+    if (slow !== null) {
+      slow = slow.next;
+    }
   }
   return slow;
 }
