@@ -34,18 +34,15 @@
 // The space complexity is O(n) because we store the values in a map.
 
 export function twoSum(nums: number[], target: number): number[] {
-  const resArr: number[] = [];
-  const map: Map<number, number> = new Map();
-  let match: number | undefined;
+  const quotients = new Map<number, number>();
+  const ans = [];
   for (let i = 0; i < nums.length; i++) {
-    const current = nums[i];
-    match = map.get(target - current);
-    if (match!== undefined) {
-      return [i, match];
+    if (quotients.has(target - nums[i])) {
+      ans.push([i, quotients.get(target - nums[i])!]);
     }
-    map.set(current, i);
+    quotients.set(nums[i], i);
   }
-  return resArr;
+  return ans[0];
 }
 
 export function displayPairThatAddUpToTarget(list:number[], target:number){
